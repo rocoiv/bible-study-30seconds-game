@@ -1,0 +1,118 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024" role="img" aria-label="Bible Study 30 Seconds icon">
+  <defs>
+    <!-- Inviting blue gradient -->
+    <linearGradient id="bgBlue" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#4fc3f7"/>
+      <stop offset="1" stop-color="#2b9edb"/>
+    </linearGradient>
+
+    <!-- Warm accent (complementary) -->
+    <linearGradient id="accent" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#ffd166"/>
+      <stop offset="1" stop-color="#ff9f1c"/>
+    </linearGradient>
+
+    <!-- Soft shadow for depth -->
+    <filter id="softShadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="18" stdDeviation="28" flood-color="#000" flood-opacity="0.25"/>
+    </filter>
+
+    <!-- Subtle inner glow -->
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+
+    <!-- Rounded mask for friendly corners -->
+    <clipPath id="rounded">
+      <rect x="0" y="0" width="1024" height="1024" rx="160" ry="160"/>
+    </clipPath>
+
+    <!-- Bold friendly font fallback -->
+    <style>
+      .caption { font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; font-weight: 800; fill: #ffffff; }
+      .tagline { font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; font-weight: 600; fill: rgba(255,255,255,0.92); }
+    </style>
+  </defs>
+
+  <!-- Background rounded square -->
+  <rect width="1024" height="1024" rx="160" fill="url(#bgBlue)"/>
+
+  <!-- Decorative soft vignette -->
+  <rect width="1024" height="1024" rx="160" fill="black" opacity="0.06"/>
+
+  <!-- Main book shape with shadow -->
+  <g transform="translate(128,160)" filter="url(#softShadow)">
+    <rect x="0" y="0" width="768" height="560" rx="44" fill="#ffffff" opacity="0.98"/>
+    <rect x="18" y="18" width="732" height="524" rx="36" fill="#f7fbfd"/>
+    <!-- Spine (rounded, friendly) -->
+    <rect x="28" y="28" width="180" height="488" rx="28" fill="#e6f7fb"/>
+    <!-- Page lines for texture -->
+    <g fill="#eef7fb" opacity="0.95">
+      <rect x="220" y="56" width="460" height="28" rx="10"/>
+      <rect x="220" y="108" width="460" height="20" rx="10"/>
+      <rect x="220" y="152" width="460" height="18" rx="10"/>
+      <rect x="220" y="196" width="460" height="18" rx="10"/>
+      <rect x="220" y="240" width="460" height="18" rx="10"/>
+    </g>
+    <!-- subtle page edge -->
+    <rect x="680" y="28" width="24" height="488" rx="8" fill="#e6f0f3" opacity="0.9"/>
+  </g>
+
+  <!-- Central emblem: cross integrated with stopwatch -->
+  <g transform="translate(512,420)" filter="url(#glow)">
+    <!-- circular badge behind cross -->
+    <circle cx="0" cy="-20" r="160" fill="url(#bgBlue)" opacity="0.95"/>
+    <circle cx="0" cy="-20" r="140" fill="#ffffff" opacity="0.06"/>
+
+    <!-- Cross body (rounded, friendly) -->
+    <g transform="translate(0,-20)">
+      <!-- vertical bar -->
+      <rect x="-36" y="-120" width="72" height="240" rx="18" fill="#ffffff"/>
+      <!-- horizontal bar -->
+      <rect x="-120" y="-36" width="240" height="72" rx="18" fill="#ffffff"/>
+      <!-- inner accent (blue) to create depth -->
+      <rect x="-24" y="-108" width="48" height="216" rx="12" fill="#2b9edb"/>
+      <rect x="-108" y="-24" width="216" height="48" rx="12" fill="#2b9edb"/>
+    </g>
+
+    <!-- Stopwatch integrated at cross center (warm accent) -->
+    <g transform="translate(0,40)">
+      <!-- outer ring -->
+      <circle cx="0" cy="0" r="64" fill="url(#accent)" stroke="#fff" stroke-width="4"/>
+      <!-- inner face -->
+      <circle cx="0" cy="0" r="52" fill="#fff" opacity="0.98"/>
+      <!-- minute hand -->
+      <rect x="-4" y="-40" width="8" height="44" rx="4" fill="#2b9edb" transform="rotate(30)"/>
+      <!-- second hand (accent) -->
+      <rect x="-2" y="-48" width="4" height="52" rx="2" fill="#ff9f1c" transform="rotate(-20)"/>
+      <!-- small top knob -->
+      <rect x="-8" y="-76" width="16" height="12" rx="6" fill="url(#accent)"/>
+      <!-- subtle ticks -->
+      <g stroke="#e6eef0" stroke-width="2" stroke-linecap="round" transform="rotate(0)">
+        <line x1="0" y1="-52" x2="0" y2="-46"/>
+        <line x1="36" y1="-36" x2="32" y2="-32" transform="rotate(45)"/>
+        <line x1="52" y1="0" x2="46" y2="0" transform="rotate(90)"/>
+        <line x1="36" y1="36" x2="32" y2="32" transform="rotate(135)"/>
+        <line x1="0" y1="52" x2="0" y2="46" transform="rotate(180)"/>
+      </g>
+    </g>
+  </g>
+
+  <!-- Friendly decorative sparkles to make it lively -->
+  <g fill="#fff" opacity="0.12">
+    <ellipse cx="200" cy="160" rx="36" ry="12" transform="rotate(-20)"/>
+    <ellipse cx="840" cy="220" rx="28" ry="8" transform="rotate(10)"/>
+    <ellipse cx="760" cy="760" rx="40" ry="14" transform="rotate(30)"/>
+  </g>
+
+  <!-- Bold caption (very readable) -->
+  <text x="512" y="920" class="caption" font-size="64" text-anchor="middle" fill="#ffffff" style="text-shadow: 0 2px 6px rgba(0,0,0,0.25);">
+    Bible Study 30 Seconds
+  </text>
+
+  <!-- Small supportive tagline -->
+  <text x="512" y="972" class="tagline" font-size="20" text-anchor="middle" fill="#eaf9ff" opacity="0.95">
+    Quick questions. Big impact.
+  </text>
+</svg>
